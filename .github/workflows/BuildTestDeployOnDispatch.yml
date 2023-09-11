@@ -1,0 +1,15 @@
+name: Reusable build test and deploy non prod
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: Daniel-Wh/gym-template-iac/.github/workflows/BuildAndReleaseDotnetDev.yml@develop
+    with:
+      lambda_function_name: auth-service-nonprod
+      project_path: auth.services
+    secrets:
+      BUCKET_LOCATION: ${{secrets.BUCKET_LOCATION}}
+      AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+      AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
