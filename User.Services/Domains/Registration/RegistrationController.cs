@@ -22,6 +22,11 @@ namespace User.Services.Domains
 
             return new ObjectResult("Ok") { StatusCode = 200 };
         }
+        [HttpGet("/health")]
+        public async Task<IActionResult> HealthCheck()
+        {
+            return Ok(200);
+        }
     }
 }
 
