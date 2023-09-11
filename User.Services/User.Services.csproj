@@ -8,6 +8,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'auth.services' " />
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="AspNetRouteVersions" Version="0.5.0" />
@@ -32,10 +33,14 @@
     <None Remove="Autofac\" />
     <None Remove="Models\" />
     <None Remove="LoggingMiddleware\" />
+    <None Remove="Domains\" />
+    <None Remove="Domains\Registration\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Autofac\" />
     <Folder Include="Models\" />
     <Folder Include="LoggingMiddleware\" />
+    <Folder Include="Domains\" />
+    <Folder Include="Domains\Registration\" />
   </ItemGroup>
 </Project>
