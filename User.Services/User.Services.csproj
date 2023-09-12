@@ -35,6 +35,7 @@
     <None Remove="LoggingMiddleware\" />
     <None Remove="Domains\" />
     <None Remove="Domains\Registration\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Autofac\" />
@@ -42,5 +43,6 @@
     <Folder Include="LoggingMiddleware\" />
     <Folder Include="Domains\" />
     <Folder Include="Domains\Registration\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

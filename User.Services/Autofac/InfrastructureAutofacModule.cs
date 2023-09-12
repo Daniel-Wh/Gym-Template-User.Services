@@ -1,5 +1,6 @@
 ﻿using System;
 using Autofac;
+using User.Services.Services;
 
 namespace User.Services.Autofac
 {
@@ -10,6 +11,8 @@ namespace User.Services.Autofac
             var loggerFactory = new LoggerFactory();
             builder.RegisterInstance(loggerFactory).As<ILoggerFactory>().SingleInstance();
             builder.RegisterGeneric(typeof(Logger<>)).As(typeof(ILogger<>)).SingleInstance();
+            builder.RegisterType<AWSCredentialsService>().SingleInstance();
+            builder.RegisterType<DynamoDbClientService>().SingleInstance();
         }
     }
 }
